@@ -23,7 +23,7 @@ def get_even_bands():
 def get_uneven_bands():
     bandlist = []    
     for bandwidth in reversed(range(1, 16, 1)):  
-        band = (frequency-bandwidth, frequency+2*bandwidth)
+        band = (frequency-.5*bandwidth, frequency+1.5*bandwidth)
         bandlist.append(band) 
     return bandlist
     
